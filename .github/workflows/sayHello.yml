@@ -9,7 +9,7 @@ jobs:
       steps:
         - uses: actions/checkout@v4
         - name: Run Custom Action
-          uses: ./action-personnalise-workflows/actions
+          uses: /home/z390/Bureau/action-personnalise-workflows/actions/action.yml
           with:
             who-to-greet: 'Mona the Octocat'
         - run: echo random-number ${{ steps.foo.outputs.random-number }}
