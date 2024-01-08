@@ -1,3 +1,3 @@
 #!bin/bash
-echo Goodbye
+echo Goodbye ! 
 chmod +x actions/goodbye.sh
