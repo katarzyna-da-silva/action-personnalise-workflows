@@ -7,10 +7,14 @@ jobs:
       runs-on: ubuntu-latest
       name: A job to say hello
       steps:
-        - uses: actions/checkout@v4
+        - name: Checkout repository
+          uses: actions/checkout@v2
+  
         - name: Run Custom Action
-          uses: /home/z390/Bureau/action-personnalise-workflows/actions/action.yml
+          uses: ./actions
           with:
             who-to-greet: 'Mona the Octocat'
-        - run: echo random-number ${{ steps.foo.outputs.random-number }}
+  
+        - name: Show Random Number
+          run: echo random-number ${{ steps.foo.outputs.random-number }}
           shell: bash
