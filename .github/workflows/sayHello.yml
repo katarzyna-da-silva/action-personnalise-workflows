@@ -18,3 +18,18 @@ jobs:
         - name: Show Random Number
           run: echo random-number ${{ steps.foo.outputs.random-number }}
           shell: bash
+
+          - name: Set up Docker Build
+          uses: docker/login-action@v3
+          with:
+            registry: ghcr.io
+            username: ${{ github.actor }}
+            password: ${{ secrets.DOCKER_TOKEN }}
+           
+        - name: Build and push Docker image
+          uses: docker/build-push-action@v5
+          with:
+            context: ./action-personnalise-workflows
+            push: true
+            tags: |
+              ghcr.io/katarzyna-da-silva/action-personnalise-workflows:latest
