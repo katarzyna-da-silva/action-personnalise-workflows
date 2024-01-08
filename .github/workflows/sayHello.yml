@@ -7,16 +7,10 @@ jobs:
       runs-on: ubuntu-latest
       name: A job to say hello
       steps:
-        - name: Checkout code
-          uses: actions/checkout@v4
-  
+        - uses: actions/checkout@v4
         - name: Run Custom Action
-          id: foo
           uses: ./action-personnalise-workflows/actions
           with:
             who-to-greet: 'Mona the Octocat'
-  
-        - name: Display Random Number
-          run: echo "random-number ${{ steps.foo.outputs.random-number }}"
+        - run: echo random-number ${{ steps.foo.outputs.random-number }}
           shell: bash
-  
