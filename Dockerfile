@@ -1,5 +1,5 @@
-# Dockerfile
-FROM alpine:latest
-COPY goodBye.sh /goodBye.sh
-RUN chmod +x /goodBye.sh
-ENTRYPOINT ["/goodBye.sh"]
+FROM debian:9.5-slim
+
+COPY entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
