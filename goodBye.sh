@@ -1,3 +1,3 @@
 #!bin/bash
-echo GoodbyeEE ! 
+echo Goodbyeee! 
 chmod +x goodbye.sh
