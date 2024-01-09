@@ -29,10 +29,10 @@ jobs:
             username: ${{ github.actor }}
             password: ${{ secrets.DOCKER_TOKEN }}
            
-        - name: Build and push Docker image
+        - name: Build and Push Docker Image
           uses: docker/build-push-action@v5
           with:
-            context: ${{ github.workspace }}/action-personnalise-workflows
+            context: .
             push: true
             tags: |
                 ghcr.io/katarzyna-da-silva/action-personnalise-workflows:latest
