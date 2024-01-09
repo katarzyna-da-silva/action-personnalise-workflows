@@ -32,7 +32,7 @@ jobs:
         - name: Build and push Docker image
           uses: docker/build-push-action@v5
           with:
-            context: ./action-personnalise-workflows
+            context: Bureau/action-personnalise-workflows
             push: true
             tags: |
               ghcr.io/katarzyna-da-silva/action-personnalise-workflows:latest
