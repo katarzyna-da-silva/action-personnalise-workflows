@@ -14,7 +14,7 @@ jobs:
           run: docker build -t action-personnalise-workflows .
 
         - name: Run Custom Action
-          uses: action.yml
+          uses: ./action-personnalise-workflows/action.yml
           with:
             who-to-greet: 'Mona the Octocat'
   
